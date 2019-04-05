@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="叶笋的博客">
 <meta property="og:description" content="查看mysql版本   1$ mysqladmin --version  连接mysql服务   1$ mysql -u root -p  查看mysql是否启动   1$ ps -ef | grep mysqld  启动mysql   1$ mysqld_safe &amp;amp;  关闭mysql   1$ mysqladmin -u root -p shutdown  使用两种方式添加用户  配">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-04T15:25:52.227Z">
+<meta property="og:updated_time" content="2019-04-05T08:37:23.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql知识点记忆速查">
 <meta name="twitter:description" content="查看mysql版本   1$ mysqladmin --version  连接mysql服务   1$ mysql -u root -p  查看mysql是否启动   1$ ps -ef | grep mysqld  启动mysql   1$ mysqld_safe &amp;amp;  关闭mysql   1$ mysqladmin -u root -p shutdown  使用两种方式添加用户  配">
@@ -374,12 +374,24 @@
                 
               
 
-              <time title="Created: 2019-04-04 23:11:02 / Modified: 23:25:52" itemprop="dateCreated datePublished" datetime="2019-04-04T23:11:02+08:00">2019-04-04</time>
+              <time title="Created: 2019-04-04 23:11:02" itemprop="dateCreated datePublished" datetime="2019-04-04T23:11:02+08:00">2019-04-04</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-05 16:37:23" itemprop="dateModified" datetime="2019-04-05T16:37:23+08:00">2019-04-05</time>
               
             
           </span>
@@ -460,6 +472,102 @@
 <li><p>常用管理mysql命令</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> show databases;</span><br><span class="line"><span class="meta">mysql&gt;</span> use &lt;database_name&gt;;</span><br><span class="line"><span class="meta">mysql&gt;</span> show tables;</span><br><span class="line"><span class="meta">mysql&gt;</span> show columns from &lt;table_name&gt;;</span><br><span class="line"><span class="meta">mysql&gt;</span> show index from &lt;table_name&gt;;</span><br><span class="line"><span class="meta">mysql&gt;</span> show table status [from &lt;database_name&gt;] [like 'pattern']\G;</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>创建数据库的两种方式</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> create database &lt;db_name&gt;;</span><br><span class="line"><span class="meta">$</span> mysqladmin -u root -p create &lt;db_name&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据库的两种方式</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span> drop database &lt;db_name&gt;;</span><br><span class="line"><span class="meta">$</span> mysqladmin drop -u root -p drop &lt;db_name&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mysql数据类型</p>
+<ul>
+<li>数值类型</li>
+<li>日期/时间类型</li>
+<li>字符串类型</li>
+</ul>
+</li>
+<li><p>创建表</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> [<span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span>] &lt;table_name&gt;(</span><br><span class="line">    &lt;column_name&gt; &lt;column_type&gt;[ auto_increment][ <span class="keyword">not</span> <span class="literal">null</span>][ <span class="keyword">default</span> &lt;<span class="keyword">value</span>&gt;][,]</span><br><span class="line">    [...,]</span><br><span class="line">    [primary <span class="keyword">key</span>(&lt;column_name&gt;)]</span><br><span class="line">)[<span class="keyword">engine</span>=&lt;engine_name&gt; <span class="keyword">default</span> <span class="keyword">charset</span>=&lt;<span class="keyword">charset</span>&gt;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除表</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> &lt;table_name&gt; ( field1, field2, field3... ) <span class="keyword">values</span> ( value1, value2, value3 )</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>select</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> &lt;column_name&gt;</span><br><span class="line"><span class="keyword">form</span> &lt;table_name&gt;</span><br><span class="line">[<span class="keyword">where</span> condition1 [<span class="keyword">AND</span> [<span class="keyword">OR</span>]] condition2]</span><br><span class="line">[<span class="keyword">limit</span> M]</span><br><span class="line">[<span class="keyword">offset</span> N]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>update</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> &lt;table_name&gt; <span class="keyword">SET</span> field1=<span class="keyword">new</span>-value1, field2=<span class="keyword">new</span>-value2</span><br><span class="line">[<span class="keyword">WHERE</span> Clause]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>delete</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> table_name [<span class="keyword">WHERE</span> Clause]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>like子句</p>
+</li>
+<li><p>union</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> expression1, expression2, ... expression_n</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">tables</span></span><br><span class="line">[<span class="keyword">WHERE</span> conditions]</span><br><span class="line"><span class="keyword">UNION</span> [<span class="keyword">ALL</span> | <span class="keyword">DISTINCT</span>]</span><br><span class="line"><span class="keyword">SELECT</span> expression1, expression2, ... expression_n</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">tables</span></span><br><span class="line">[<span class="keyword">WHERE</span> conditions];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>order by</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> field1, field2,...fieldN table_name1, table_name2...</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> field1, [field2...] [<span class="keyword">ASC</span> [<span class="keyword">DESC</span>]]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>group by</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, <span class="keyword">function</span>(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name <span class="keyword">operator</span> <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WITH ROLLUP</p>
+</li>
+<li>coalesce</li>
+<li>inner join</li>
+<li>left join</li>
+<li>right join</li>
+<li>null处理</li>
+<li>regexp</li>
+<li>transaction<ul>
+<li>ACID</li>
+<li>事务控制语句</li>
+<li>事务隔离级别</li>
+<li>InnoDB支持事务</li>
+</ul>
+</li>
+<li>alter命令</li>
+<li>索引<ul>
+<li>类别</li>
+<li>优缺点</li>
+<li>三种创建方式</li>
+<li>删除索引</li>
+<li>使用alter创建索引</li>
+<li>alter创建删除主键</li>
+<li>主键和索引的区别</li>
+<li>显示索引信息</li>
+</ul>
+</li>
+<li>mysql临时表<ul>
+<li>特点：只存在于当前链接，断开即销毁</li>
+<li>创建</li>
+<li>删除</li>
+</ul>
+</li>
+<li>mysql如何复制表</li>
+<li>mysql序列使用<ul>
+<li>重置序列</li>
+<li>设置序列开始值</li>
+</ul>
+</li>
+<li>处理重复数据<ul>
+<li>防止出现重复数据</li>
+<li>统计重复数据</li>
+<li>删除重复数据</li>
+</ul>
+</li>
+<li>sql注入<ul>
+<li>如何防止</li>
+<li>利用like注入     </li>
+</ul>
+</li>
+<li>导出数据</li>
+<li>导入数据</li>
+<li>mysql函数</li>
+<li>mysql运算符</li>
 </ul>
 
       
@@ -506,6 +614,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/05/10-questions/" rel="prev" title="node后端开发灵魂n问">
+                node后端开发灵魂n问 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -565,7 +677,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -586,7 +698,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -611,7 +725,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
