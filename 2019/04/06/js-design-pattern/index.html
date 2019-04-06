@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Constructor(构造器)模式{% codeblock lang:javascript %}     function Person(name, age) {         this.name = name;         this.age = age;     }      Person.prototype.sleep = function() {         return &apos;zz">
+  <meta name="description" content="Constructor(构造器)模式1234567891011function Person(name, age) &amp;#123;    this.name = name;    this.age = age;&amp;#125;Person.prototype.sleep = function() &amp;#123;    return &apos;zzzzzzzzz&apos;;&amp;#125;;let wangys219 = ne">
 <meta name="keywords" content="设计模式,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js设计模式">
 <meta property="og:url" content="http://wangys219.github.io/2019/04/06/js-design-pattern/index.html">
 <meta property="og:site_name" content="叶笋的博客">
-<meta property="og:description" content="Constructor(构造器)模式{% codeblock lang:javascript %}     function Person(name, age) {         this.name = name;         this.age = age;     }      Person.prototype.sleep = function() {         return &apos;zz">
+<meta property="og:description" content="Constructor(构造器)模式1234567891011function Person(name, age) &amp;#123;    this.name = name;    this.age = age;&amp;#125;Person.prototype.sleep = function() &amp;#123;    return &apos;zzzzzzzzz&apos;;&amp;#125;;let wangys219 = ne">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-06T15:18:35.386Z">
+<meta property="og:updated_time" content="2019-04-06T15:27:06.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js设计模式">
-<meta name="twitter:description" content="Constructor(构造器)模式{% codeblock lang:javascript %}     function Person(name, age) {         this.name = name;         this.age = age;     }      Person.prototype.sleep = function() {         return &apos;zz">
+<meta name="twitter:description" content="Constructor(构造器)模式1234567891011function Person(name, age) &amp;#123;    this.name = name;    this.age = age;&amp;#125;Person.prototype.sleep = function() &amp;#123;    return &apos;zzzzzzzzz&apos;;&amp;#125;;let wangys219 = ne">
 
 
 
@@ -374,7 +374,7 @@
                 
               
 
-              <time title="Created: 2019-04-06 22:06:02 / Modified: 23:18:35" itemprop="dateCreated datePublished" datetime="2019-04-06T22:06:02+08:00">2019-04-06</time>
+              <time title="Created: 2019-04-06 22:06:02 / Modified: 23:27:06" itemprop="dateCreated datePublished" datetime="2019-04-06T22:06:02+08:00">2019-04-06</time>
             
 
             
@@ -438,22 +438,11 @@
       
 
       
-        <h2 id="Constructor-构造器-模式"><a href="#Constructor-构造器-模式" class="headerlink" title="Constructor(构造器)模式"></a>Constructor(构造器)模式</h2><pre><code>{% codeblock lang:javascript %}
-    function Person(name, age) {
-        this.name = name;
-        this.age = age;
-    }
+        <h2 id="Constructor-构造器-模式"><a href="#Constructor-构造器-模式" class="headerlink" title="Constructor(构造器)模式"></a>Constructor(构造器)模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.sleep = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'zzzzzzzzz'</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> wangys219 = <span class="keyword">new</span> Person(<span class="string">'wangys219'</span>, <span class="number">219</span>);</span><br><span class="line"><span class="built_in">console</span>.log(wangys219.sleep());</span><br></pre></td></tr></table></figure>
+<ul>
+<li>sleep()在所有Person对象间共享</li>
+</ul>
 
-    Person.prototype.sleep = function() {
-        return 'zzzzzzzzz';
-    };
-
-    let wangys219 = new Person('wangys219', 219);
-    console.log(wangys219.sleep());
-    {% endcodeblock %}
-
-* sleep()在所有Person对象间共享
-</code></pre>
       
     </div>
 
