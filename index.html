@@ -389,7 +389,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-07 13:18:48" itemprop="dateModified" datetime="2019-04-07T13:18:48+08:00">2019-04-07</time>
+                <time title="Modified: 2019-04-07 13:53:30" itemprop="dateModified" datetime="2019-04-07T13:53:30+08:00">2019-04-07</time>
               
             
           </span>
@@ -481,6 +481,7 @@
 </ul>
 </li>
 </ul>
+<h2 id="Singleton-单例-模式"><a href="#Singleton-单例-模式" class="headerlink" title="Singleton(单例)模式"></a>Singleton(单例)模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someSingleton = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getInstance: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!instance) instance = init();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> instance;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
           
         
