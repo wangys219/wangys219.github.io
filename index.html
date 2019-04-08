@@ -372,12 +372,24 @@
                 
               
 
-              <time title="Created: 2019-04-08 16:51:20 / Modified: 18:31:44" itemprop="dateCreated datePublished" datetime="2019-04-08T16:51:20+08:00">2019-04-08</time>
+              <time title="Created: 2019-04-08 16:51:20" itemprop="dateCreated datePublished" datetime="2019-04-08T16:51:20+08:00">2019-04-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-09 00:53:59" itemprop="dateModified" datetime="2019-04-09T00:53:59+08:00">2019-04-09</time>
               
             
           </span>
@@ -549,12 +561,9 @@
 <li>Service Registry –Discover–&gt; Consumer(LB) –Load Balancing &amp; Invoke–&gt; ServiceProvider –Registry &amp; Keep Alive–&gt; Service Registry</li>
 </ul>
 </li>
-<li><p>主机独立LB模式</p>
-<ul>
+<li>主机独立LB模式<ul>
 <li>Service Registry –Discover–&gt; Host( Consumer -&gt; LB ) –Load Balancing &amp; Invoke–&gt; ServiceProvider –Registry &amp; Keep Alive–&gt; Service Registry</li>
 </ul>
-</li>
-<li><p>Service Mesh</p>
 </li>
 </ul>
 <h2 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h2><ul>
@@ -562,9 +571,167 @@
 <li>反向路由</li>
 <li>安全认证</li>
 <li>限流熔断</li>
-<li>日志监控 </li>
+<li>日志监控</li>
 </ul>
 </li>
+</ul>
+<h2 id="网关架构"><a href="#网关架构" class="headerlink" title="网关架构"></a>网关架构</h2><blockquote><p>Http Request -&gt; pre filters -&gt; router filters -&gt; origin server -&gt; router filters -&gt; post filters -&gt; Http Response</p>
+</blockquote>
+<h2 id="路由发现体系"><a href="#路由发现体系" class="headerlink" title="路由发现体系"></a>路由发现体系</h2><ul>
+<li>服务注册中心 -&gt; 服务治理</li>
+</ul>
+<h2 id="配置中心"><a href="#配置中心" class="headerlink" title="配置中心"></a>配置中心</h2><ul>
+<li>统一配置</li>
+<li>动态配置</li>
+<li>Config Server -&gt; Service</li>
+</ul>
+<h2 id="微服务中两种典型通信方式"><a href="#微服务中两种典型通信方式" class="headerlink" title="微服务中两种典型通信方式"></a>微服务中两种典型通信方式</h2><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">RPC</th>
+<th style="text-align:center">REST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">耦合性</td>
+<td style="text-align:center">强耦合</td>
+<td style="text-align:center">松散耦合</td>
+</tr>
+<tr>
+<td style="text-align:center">消息协议</td>
+<td style="text-align:center">二进制 thrift,protobuf</td>
+<td style="text-align:center">文本 xml, json</td>
+</tr>
+<tr>
+<td style="text-align:center">通讯协议</td>
+<td style="text-align:center">TCP</td>
+<td style="text-align:center">HTTP/HTTP2</td>
+</tr>
+<tr>
+<td style="text-align:center">性能</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">一般低于RPC</td>
+</tr>
+<tr>
+<td style="text-align:center">接口契约IDL</td>
+<td style="text-align:center">thrift,protobuf IDL</td>
+<td style="text-align:center">swagger</td>
+</tr>
+<tr>
+<td style="text-align:center">客户端</td>
+<td style="text-align:center">强类型客户端，一般自动生成，多语言</td>
+<td style="text-align:center">一般HTTP客户端可访问，可自动生成强类型客户端，多语言</td>
+</tr>
+<tr>
+<td style="text-align:center">案例</td>
+<td style="text-align:center">Dubbo,motan,Tars,grpc,thrift</td>
+<td style="text-align:center">spring mvc/boot, Jax-rs，drop wizard</td>
+</tr>
+<tr>
+<td style="text-align:center">开发者友好</td>
+<td style="text-align:center">客户端比较方便，但二进制消息不可读</td>
+<td style="text-align:center">文本消息开发者可读</td>
+</tr>
+<tr>
+<td style="text-align:center">对外开放</td>
+<td style="text-align:center">对外一般需要转换成REST/文本协议</td>
+<td style="text-align:center">直接可以对外开放</td>
+</tr>
+</tbody>
+</table>
+<h2 id="微服务框架和治理"><a href="#微服务框架和治理" class="headerlink" title="微服务框架和治理"></a>微服务框架和治理</h2><ul>
+<li>服务注册发现</li>
+<li>负载均衡、软路由</li>
+<li>日志</li>
+<li>Metrics</li>
+<li>调用链埋点</li>
+<li>限流熔断</li>
+<li>安全&amp;访问控制</li>
+<li>REST/RPC</li>
+<li>序列化 xml/json/二进制</li>
+<li>代码生成</li>
+<li>统一异常处理</li>
+<li>文档</li>
+<li>配置集成</li>
+<li>后台服务集成 DB/MQ/Cache</li>
+</ul>
+<h2 id="微服务分层监控和架构"><a href="#微服务分层监控和架构" class="headerlink" title="微服务分层监控和架构"></a>微服务分层监控和架构</h2><ul>
+<li>监控分层<ul>
+<li>技术设施监控<ul>
+<li>网络 交换机</li>
+<li>网络流量 丢包 错包 连接数</li>
+</ul>
+</li>
+<li>系统层监控<ul>
+<li>物理机 虚拟机 os</li>
+<li>cpu memory network disk</li>
+</ul>
+</li>
+<li>应用层监控<ul>
+<li>url service sql cache可用率 响应时间 qps</li>
+</ul>
+</li>
+<li>业务监控<ul>
+<li>登录 注册 下单 支付</li>
+</ul>
+</li>
+<li>端用户体验监控<ul>
+<li>性能 返回码 城市 地区 运营商 版本 系统</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>监控点<ul>
+<li>日志监控</li>
+<li>Metrics监控</li>
+<li>健康检查</li>
+<li>调用链监控</li>
+<li>告警系统</li>
+</ul>
+</li>
+<li>监控架构<ul>
+<li>微服务 agent -&gt; kafka</li>
+<li>kafka –log–&gt; ELK</li>
+<li>kafka –metrics–&gt; Influx DB/Grafana</li>
+</ul>
+</li>
+</ul>
+<h2 id="微服务调用链监控"><a href="#微服务调用链监控" class="headerlink" title="微服务调用链监控"></a>微服务调用链监控</h2><ul>
+<li>调用链监控原理：span tree</li>
+<li>开源工具：CAT、Zipkin、Pinpoint</li>
+</ul>
+<h2 id="微服务限流熔断"><a href="#微服务限流熔断" class="headerlink" title="微服务限流熔断"></a>微服务限流熔断</h2><ul>
+<li>核心概念<ul>
+<li>熔断</li>
+<li>隔离</li>
+<li>限流</li>
+<li>降级</li>
+</ul>
+</li>
+<li>了解Hystrix如何实现限流熔断</li>
+</ul>
+<h2 id="容器部署-持续交付-发布模式"><a href="#容器部署-持续交付-发布模式" class="headerlink" title="容器部署 持续交付 发布模式"></a>容器部署 持续交付 发布模式</h2><ul>
+<li>容器的优势<ul>
+<li>解决环境一致性问题</li>
+<li>镜像部署</li>
+</ul>
+</li>
+<li>持续交付流水线<ul>
+<li>git –Jenkins 构建 单元测试 打镜像–&gt; 镜像治理中心(docker registry)</li>
+<li>测试环境 –&gt; UAT环境 –&gt; 生产环境(蓝绿/灰度部署)</li>
+</ul>
+</li>
+<li>蓝绿部署、灰度部署</li>
+</ul>
+<h2 id="容器调度以及基于容器的发布体系"><a href="#容器调度以及基于容器的发布体系" class="headerlink" title="容器调度以及基于容器的发布体系"></a>容器调度以及基于容器的发布体系</h2><ul>
+<li>mesos容器调度<ul>
+<li>ZooKeeper –&gt; Master Leader/Master Standby</li>
+<li>Master Leader –&gt; Slave</li>
+</ul>
+</li>
+<li>发布体系 </li>
 </ul>
 
           
