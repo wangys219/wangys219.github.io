@@ -327,6 +327,301 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wangys219.github.io/2019/04/08/micro-service/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wangys219">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶笋的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/micro-service/" class="post-title-link" itemprop="url">微服务架构</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-08 16:51:20 / Modified: 18:31:44" itemprop="dateCreated datePublished" datetime="2019-04-08T16:51:20+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="微服务定义"><a href="#微服务定义" class="headerlink" title="微服务定义"></a>微服务定义</h2><ul>
+<li>六个特点<ul>
+<li>一小组服务</li>
+<li>独立进程</li>
+<li>轻量级通信</li>
+<li>基于业务能力</li>
+<li>独立部署</li>
+<li>无集中式管理</li>
+</ul>
+</li>
+<li>定义<ul>
+<li>松散耦合</li>
+<li>soa</li>
+<li>bounded context</li>
+</ul>
+</li>
+</ul>
+<h2 id="微服务的利弊"><a href="#微服务的利弊" class="headerlink" title="微服务的利弊"></a>微服务的利弊</h2><ul>
+<li>利<ul>
+<li>强模块化边界</li>
+<li>可独立部署</li>
+<li>技术多样性</li>
+</ul>
+</li>
+<li>弊<ul>
+<li>分布式复杂度</li>
+<li>最终一致性</li>
+<li>运维复杂性</li>
+<li>测试复杂性</li>
+</ul>
+</li>
+</ul>
+<h2 id="康威法则"><a href="#康威法则" class="headerlink" title="康威法则"></a>康威法则</h2><blockquote><p>设计系统的组织，其产生的设计和架构，等价组织的组织架构。</p>
+</blockquote>
+<h2 id="微服务架构的适用性"><a href="#微服务架构的适用性" class="headerlink" title="微服务架构的适用性"></a>微服务架构的适用性</h2><ul>
+<li>考虑生产力和系统复杂度</li>
+<li>单块优先</li>
+</ul>
+<h2 id="微服务组织架构"><a href="#微服务组织架构" class="headerlink" title="微服务组织架构"></a>微服务组织架构</h2><ul>
+<li>End-end ownership</li>
+<li>跨职能微服务产品团队 -&gt; API &lt;- 平台团队</li>
+</ul>
+<h2 id="微服务中台"><a href="#微服务中台" class="headerlink" title="微服务中台"></a>微服务中台</h2><ul>
+<li>业务前台<ul>
+<li>应用: web app ( 渠道: 第三方接入 )</li>
+</ul>
+</li>
+<li>业务中台 <ul>
+<li>核心业务层</li>
+</ul>
+</li>
+<li><p>技术中台</p>
+<ul>
+<li>PaaS云平台: 应用监控 持续交付 服务框架 资源调度 后台服务 ( 大数据 AI )</li>
+<li>IaaS云平台: 计算 存储 网络 监控 安全 IDC</li>
+</ul>
+</li>
+<li><p>大中台小前台</p>
+</li>
+</ul>
+<h2 id="服务分层-逻辑"><a href="#服务分层-逻辑" class="headerlink" title="服务分层(逻辑)"></a>服务分层(逻辑)</h2><ul>
+<li>外部设备</li>
+<li>微服务(SOA)<ul>
+<li>聚合服务(适配服务 边界服务): Web BF, Mobile BFF, Pubilc BFF</li>
+<li>基础服务(核心领域服务 公共服务 中间层服务)</li>
+</ul>
+</li>
+</ul>
+<h2 id="微服务技术架构体系"><a href="#微服务技术架构体系" class="headerlink" title="微服务技术架构体系"></a>微服务技术架构体系</h2><ul>
+<li>接入层<ul>
+<li>外部+内部 LB</li>
+</ul>
+</li>
+<li>网关层<ul>
+<li>作用：反向代理 限流熔断</li>
+<li>组成：内部GW H5GW 无线GW 第三方GW 开放平台GW</li>
+</ul>
+</li>
+<li>业务服务层<ul>
+<li>聚合服务 基础服务</li>
+</ul>
+</li>
+<li>支撑服务<ul>
+<li>组成：注册发现 集中配置 容错限流 认证授权 日志聚合 监控告警 后台服务</li>
+</ul>
+</li>
+<li>平台服务<ul>
+<li>组成：发布系统 集群资源调用 镜像治理 资源治理 IAM</li>
+</ul>
+</li>
+<li>基础设置<ul>
+<li>计算 网络 存储 NOC监控 安全 IDC</li>
+</ul>
+</li>
+<li>六层体系中的纵向能力<ul>
+<li>微服务开发框架</li>
+<li>持续交付流水线</li>
+<li>端到端工具链</li>
+<li>工程实践与规范</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务发现机制"><a href="#服务发现机制" class="headerlink" title="服务发现机制"></a>服务发现机制</h2><h3 id="三种主流服务发现模式"><a href="#三种主流服务发现模式" class="headerlink" title="三种主流服务发现模式"></a>三种主流服务发现模式</h3><ul>
+<li>传统LB模式<ul>
+<li>DNS –Discover–&gt; Consumer –Invoke–&gt; Load Balancer –Load Balancing Invoke–&gt; Service Provider</li>
+</ul>
+</li>
+<li>进程内LB模式<ul>
+<li>Service Registry –Discover–&gt; Consumer(LB) –Load Balancing &amp; Invoke–&gt; ServiceProvider –Registry &amp; Keep Alive–&gt; Service Registry</li>
+</ul>
+</li>
+<li><p>主机独立LB模式</p>
+<ul>
+<li>Service Registry –Discover–&gt; Host( Consumer -&gt; LB ) –Load Balancing &amp; Invoke–&gt; ServiceProvider –Registry &amp; Keep Alive–&gt; Service Registry</li>
+</ul>
+</li>
+<li><p>Service Mesh</p>
+</li>
+</ul>
+<h2 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h2><ul>
+<li>四项基本功能<ul>
+<li>反向路由</li>
+<li>安全认证</li>
+<li>限流熔断</li>
+<li>日志监控 </li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wangys219.github.io/2019/04/06/js-design-pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -389,7 +684,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-07 13:53:30" itemprop="dateModified" datetime="2019-04-07T13:53:30+08:00">2019-04-07</time>
+                <time title="Modified: 2019-04-08 01:15:34" itemprop="dateModified" datetime="2019-04-08T01:15:34+08:00">2019-04-08</time>
               
             
           </span>
@@ -482,6 +777,12 @@
 </li>
 </ul>
 <h2 id="Singleton-单例-模式"><a href="#Singleton-单例-模式" class="headerlink" title="Singleton(单例)模式"></a>Singleton(单例)模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someSingleton = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> instance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">init</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getInstance: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!instance) instance = init();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> instance;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h2 id="Observer-观察者-模式"><a href="#Observer-观察者-模式" class="headerlink" title="Observer(观察者)模式"></a>Observer(观察者)模式</h2><ul>
+<li>Subject(目标): 维护一系列观察者，添加删除观察者</li>
+<li>Observer(观察者): 为那些在目标状态发生改变时需获取通知的对象提供更新接口</li>
+<li>ConcreteSubject(具体目标): 状态发生改变时，向Observer发出通知，储存ConcreteObserver的状态</li>
+<li>ConcreteObserver(具体观察者): </li>
+</ul>
 
           
         
@@ -921,12 +1222,24 @@
                 
               
 
-              <time title="Created: 2019-04-05 14:38:20 / Modified: 15:09:05" itemprop="dateCreated datePublished" datetime="2019-04-05T14:38:20+08:00">2019-04-05</time>
+              <time title="Created: 2019-04-05 14:38:20" itemprop="dateCreated datePublished" datetime="2019-04-05T14:38:20+08:00">2019-04-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-08 14:17:39" itemprop="dateModified" datetime="2019-04-08T14:17:39+08:00">2019-04-08</time>
               
             
           </span>
@@ -980,7 +1293,8 @@
       
         
           
-            <h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><h2 id="Q1-服务端逻辑那么紧密，如何hold住？"><a href="#Q1-服务端逻辑那么紧密，如何hold住？" class="headerlink" title="Q1: 服务端逻辑那么紧密，如何hold住？"></a>Q1: 服务端逻辑那么紧密，如何hold住？</h2><h2 id="Q2-服务端跟其他系统之间的耦合，如何hold住？"><a href="#Q2-服务端跟其他系统之间的耦合，如何hold住？" class="headerlink" title="Q2: 服务端跟其他系统之间的耦合，如何hold住？"></a>Q2: 服务端跟其他系统之间的耦合，如何hold住？</h2><h2 id="Q3-请求量太大天天挂如何解决？"><a href="#Q3-请求量太大天天挂如何解决？" class="headerlink" title="Q3: 请求量太大天天挂如何解决？"></a>Q3: 请求量太大天天挂如何解决？</h2><h2 id="Q4-IO瓶颈了如何搞定？"><a href="#Q4-IO瓶颈了如何搞定？" class="headerlink" title="Q4: IO瓶颈了如何搞定？"></a>Q4: IO瓶颈了如何搞定？</h2><h2 id="Q5-缓存该怎么用？"><a href="#Q5-缓存该怎么用？" class="headerlink" title="Q5: 缓存该怎么用？"></a>Q5: 缓存该怎么用？</h2><h2 id="Q6-应用架构如何设计？"><a href="#Q6-应用架构如何设计？" class="headerlink" title="Q6: 应用架构如何设计？"></a>Q6: 应用架构如何设计？</h2><h2 id="Q7-分层如何设计？"><a href="#Q7-分层如何设计？" class="headerlink" title="Q7: 分层如何设计？"></a>Q7: 分层如何设计？</h2><h2 id="Q8-数据库如何优化？"><a href="#Q8-数据库如何优化？" class="headerlink" title="Q8: 数据库如何优化？"></a>Q8: 数据库如何优化？</h2><h2 id="Q9-代码如何调试？"><a href="#Q9-代码如何调试？" class="headerlink" title="Q9: 代码如何调试？"></a>Q9: 代码如何调试？</h2><h2 id="Q10-如何分析内存泄漏？"><a href="#Q10-如何分析内存泄漏？" class="headerlink" title="Q10: 如何分析内存泄漏？"></a>Q10: 如何分析内存泄漏？</h2><h2 id="Q11-单元测试写没写过？"><a href="#Q11-单元测试写没写过？" class="headerlink" title="Q11: 单元测试写没写过？"></a>Q11: 单元测试写没写过？</h2><h2 id="Q12-HTTP原理了解多少？"><a href="#Q12-HTTP原理了解多少？" class="headerlink" title="Q12: HTTP原理了解多少？"></a>Q12: HTTP原理了解多少？</h2><h2 id="Q13-Nginx配置服务器部署知道几何？"><a href="#Q13-Nginx配置服务器部署知道几何？" class="headerlink" title="Q13: Nginx配置服务器部署知道几何？"></a>Q13: Nginx配置服务器部署知道几何？</h2><h2 id="Q14-性能监控跟踪以及优化"><a href="#Q14-性能监控跟踪以及优化" class="headerlink" title="Q14: 性能监控跟踪以及优化"></a>Q14: 性能监控跟踪以及优化</h2>
+            <h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><h2 id="Q1-服务端逻辑那么紧密，如何hold住？"><a href="#Q1-服务端逻辑那么紧密，如何hold住？" class="headerlink" title="Q1: 服务端逻辑那么紧密，如何hold住？"></a>Q1: 服务端逻辑那么紧密，如何hold住？</h2><h2 id="Q2-服务端跟其他系统之间的耦合，如何hold住？"><a href="#Q2-服务端跟其他系统之间的耦合，如何hold住？" class="headerlink" title="Q2: 服务端跟其他系统之间的耦合，如何hold住？"></a>Q2: 服务端跟其他系统之间的耦合，如何hold住？</h2><h2 id="Q3-请求量太大天天挂如何解决？"><a href="#Q3-请求量太大天天挂如何解决？" class="headerlink" title="Q3: 请求量太大天天挂如何解决？"></a>Q3: 请求量太大天天挂如何解决？</h2><h2 id="Q4-IO瓶颈了如何搞定？"><a href="#Q4-IO瓶颈了如何搞定？" class="headerlink" title="Q4: IO瓶颈了如何搞定？"></a>Q4: IO瓶颈了如何搞定？</h2><h2 id="Q5-缓存该怎么用？"><a href="#Q5-缓存该怎么用？" class="headerlink" title="Q5: 缓存该怎么用？"></a>Q5: 缓存该怎么用？</h2><h2 id="Q6-应用架构如何设计？"><a href="#Q6-应用架构如何设计？" class="headerlink" title="Q6: 应用架构如何设计？"></a>Q6: 应用架构如何设计？</h2><h2 id="Q7-分层如何设计？"><a href="#Q7-分层如何设计？" class="headerlink" title="Q7: 分层如何设计？"></a>Q7: 分层如何设计？</h2><h2 id="Q8-数据库如何优化？"><a href="#Q8-数据库如何优化？" class="headerlink" title="Q8: 数据库如何优化？"></a>Q8: 数据库如何优化？</h2><h2 id="Q9-代码如何调试？"><a href="#Q9-代码如何调试？" class="headerlink" title="Q9: 代码如何调试？"></a>Q9: 代码如何调试？</h2><p>关于代码调试可查阅<a href="https://nodejs.org/zh-cn/docs/guides/debugging-getting-started/" target="_blank" rel="noopener">官方调试指南</a></p>
+<h2 id="Q10-如何分析内存泄漏？"><a href="#Q10-如何分析内存泄漏？" class="headerlink" title="Q10: 如何分析内存泄漏？"></a>Q10: 如何分析内存泄漏？</h2><h2 id="Q11-单元测试写没写过？"><a href="#Q11-单元测试写没写过？" class="headerlink" title="Q11: 单元测试写没写过？"></a>Q11: 单元测试写没写过？</h2><h2 id="Q12-HTTP原理了解多少？"><a href="#Q12-HTTP原理了解多少？" class="headerlink" title="Q12: HTTP原理了解多少？"></a>Q12: HTTP原理了解多少？</h2><h2 id="Q13-Nginx配置服务器部署知道几何？"><a href="#Q13-Nginx配置服务器部署知道几何？" class="headerlink" title="Q13: Nginx配置服务器部署知道几何？"></a>Q13: Nginx配置服务器部署知道几何？</h2><h2 id="Q14-性能监控跟踪以及优化"><a href="#Q14-性能监控跟踪以及优化" class="headerlink" title="Q14: 性能监控跟踪以及优化"></a>Q14: 性能监控跟踪以及优化</h2>
           
         
       
@@ -1554,7 +1868,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1616,7 +1930,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
