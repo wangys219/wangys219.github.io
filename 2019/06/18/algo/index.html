@@ -96,18 +96,17 @@
 
 
 
-  <meta name="description" content="微服务定义 六个特点 一小组服务 独立进程 轻量级通信 基于业务能力 独立部署 无集中式管理   定义 松散耦合 soa bounded context    微服务的利弊 利 强模块化边界 可独立部署 技术多样性   弊 分布式复杂度 最终一致性 运维复杂性 测试复杂性    康威法则设计系统的组织，其产生的设计和架构，等价组织的组织架构。  微服务架构的适用性 考虑生产力和系统复杂度 单块优先">
-<meta name="keywords" content="后端,架构">
+  <meta name="description" content="栈和队列重点 了解 FIFO 和 LIFO 处理顺序的原理 实现这两个数据结构 熟悉内置的队列和栈结构 解决基本的队列相关问题，尤其是 BFS 解决基本的栈相关问题 理解当你使用 DFS 和其他递归算法来解决问题时，系统栈是如何帮助你的。   队列 定义 实现 循环队列 实现 BFS 实现 如何避免无限循环 作用：遍历，求最短路径 BFS 注意深度需要靠统计每一层的size来辅助计算   栈 实现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微服务架构">
-<meta property="og:url" content="http://wangys219.github.io/2019/04/08/micro-service/index.html">
+<meta property="og:title" content="算法笔记">
+<meta property="og:url" content="http://wangys219.github.io/2019/06/18/algo/index.html">
 <meta property="og:site_name" content="叶笋的博客">
-<meta property="og:description" content="微服务定义 六个特点 一小组服务 独立进程 轻量级通信 基于业务能力 独立部署 无集中式管理   定义 松散耦合 soa bounded context    微服务的利弊 利 强模块化边界 可独立部署 技术多样性   弊 分布式复杂度 最终一致性 运维复杂性 测试复杂性    康威法则设计系统的组织，其产生的设计和架构，等价组织的组织架构。  微服务架构的适用性 考虑生产力和系统复杂度 单块优先">
+<meta property="og:description" content="栈和队列重点 了解 FIFO 和 LIFO 处理顺序的原理 实现这两个数据结构 熟悉内置的队列和栈结构 解决基本的队列相关问题，尤其是 BFS 解决基本的栈相关问题 理解当你使用 DFS 和其他递归算法来解决问题时，系统栈是如何帮助你的。   队列 定义 实现 循环队列 实现 BFS 实现 如何避免无限循环 作用：遍历，求最短路径 BFS 注意深度需要靠统计每一层的size来辅助计算   栈 实现">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-08T16:53:59.874Z">
+<meta property="og:updated_time" content="2019-06-18T14:47:50.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微服务架构">
-<meta name="twitter:description" content="微服务定义 六个特点 一小组服务 独立进程 轻量级通信 基于业务能力 独立部署 无集中式管理   定义 松散耦合 soa bounded context    微服务的利弊 利 强模块化边界 可独立部署 技术多样性   弊 分布式复杂度 最终一致性 运维复杂性 测试复杂性    康威法则设计系统的组织，其产生的设计和架构，等价组织的组织架构。  微服务架构的适用性 考虑生产力和系统复杂度 单块优先">
+<meta name="twitter:title" content="算法笔记">
+<meta name="twitter:description" content="栈和队列重点 了解 FIFO 和 LIFO 处理顺序的原理 实现这两个数据结构 熟悉内置的队列和栈结构 解决基本的队列相关问题，尤其是 BFS 解决基本的栈相关问题 理解当你使用 DFS 和其他递归算法来解决问题时，系统栈是如何帮助你的。   队列 定义 实现 循环队列 实现 BFS 实现 如何避免无限循环 作用：遍历，求最短路径 BFS 注意深度需要靠统计每一层的size来辅助计算   栈 实现">
 
 
 
@@ -115,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://wangys219.github.io/2019/04/08/micro-service/">
+  <link rel="canonical" href="http://wangys219.github.io/2019/06/18/algo/">
 
 
 
@@ -125,7 +124,7 @@
   };
 </script>
 
-  <title>微服务架构 | 叶笋的博客</title>
+  <title>算法笔记 | 叶笋的博客</title>
   
 
 
@@ -331,7 +330,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wangys219.github.io/2019/04/08/micro-service/">
+    <link itemprop="mainEntityOfPage" href="http://wangys219.github.io/2019/06/18/algo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wangys219">
@@ -348,7 +347,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">微服务架构
+          <h1 class="post-title" itemprop="name headline">算法笔记
 
               
             
@@ -374,24 +373,12 @@
                 
               
 
-              <time title="Created: 2019-04-08 16:51:20" itemprop="dateCreated datePublished" datetime="2019-04-08T16:51:20+08:00">2019-04-08</time>
+              <time title="Created: 2019-06-18 22:41:40 / Modified: 22:47:50" itemprop="dateCreated datePublished" datetime="2019-06-18T22:41:40+08:00">2019-06-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-04-09 00:53:59" itemprop="dateModified" datetime="2019-04-09T00:53:59+08:00">2019-04-09</time>
               
             
           </span>
@@ -450,288 +437,29 @@
       
 
       
-        <h2 id="微服务定义"><a href="#微服务定义" class="headerlink" title="微服务定义"></a>微服务定义</h2><ul>
-<li>六个特点<ul>
-<li>一小组服务</li>
-<li>独立进程</li>
-<li>轻量级通信</li>
-<li>基于业务能力</li>
-<li>独立部署</li>
-<li>无集中式管理</li>
-</ul>
-</li>
-<li>定义<ul>
-<li>松散耦合</li>
-<li>soa</li>
-<li>bounded context</li>
-</ul>
-</li>
-</ul>
-<h2 id="微服务的利弊"><a href="#微服务的利弊" class="headerlink" title="微服务的利弊"></a>微服务的利弊</h2><ul>
-<li>利<ul>
-<li>强模块化边界</li>
-<li>可独立部署</li>
-<li>技术多样性</li>
-</ul>
-</li>
-<li>弊<ul>
-<li>分布式复杂度</li>
-<li>最终一致性</li>
-<li>运维复杂性</li>
-<li>测试复杂性</li>
-</ul>
-</li>
-</ul>
-<h2 id="康威法则"><a href="#康威法则" class="headerlink" title="康威法则"></a>康威法则</h2><blockquote><p>设计系统的组织，其产生的设计和架构，等价组织的组织架构。</p>
-</blockquote>
-<h2 id="微服务架构的适用性"><a href="#微服务架构的适用性" class="headerlink" title="微服务架构的适用性"></a>微服务架构的适用性</h2><ul>
-<li>考虑生产力和系统复杂度</li>
-<li>单块优先</li>
-</ul>
-<h2 id="微服务组织架构"><a href="#微服务组织架构" class="headerlink" title="微服务组织架构"></a>微服务组织架构</h2><ul>
-<li>End-end ownership</li>
-<li>跨职能微服务产品团队 -&gt; API &lt;- 平台团队</li>
-</ul>
-<h2 id="微服务中台"><a href="#微服务中台" class="headerlink" title="微服务中台"></a>微服务中台</h2><ul>
-<li>业务前台<ul>
-<li>应用: web app ( 渠道: 第三方接入 )</li>
-</ul>
-</li>
-<li>业务中台 <ul>
-<li>核心业务层</li>
-</ul>
-</li>
-<li><p>技术中台</p>
+        <h3 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h3><h4 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h4><ol>
+<li>了解 FIFO 和 LIFO 处理顺序的原理</li>
+<li>实现这两个数据结构</li>
+<li>熟悉内置的队列和栈结构</li>
+<li>解决基本的队列相关问题，尤其是 BFS</li>
+<li>解决基本的栈相关问题</li>
+<li>理解当你使用 DFS 和其他递归算法来解决问题时，系统栈是如何帮助你的。</li>
+</ol>
 <ul>
-<li>PaaS云平台: 应用监控 持续交付 服务框架 资源调度 后台服务 ( 大数据 AI )</li>
-<li>IaaS云平台: 计算 存储 网络 监控 安全 IDC</li>
+<li>队列<ul>
+<li>定义</li>
+<li>实现</li>
+<li>循环队列 实现</li>
+<li>BFS 实现 如何避免无限循环 作用：遍历，求最短路径</li>
+<li>BFS 注意深度需要靠统计每一层的size来辅助计算</li>
 </ul>
 </li>
-<li><p>大中台小前台</p>
-</li>
-</ul>
-<h2 id="服务分层-逻辑"><a href="#服务分层-逻辑" class="headerlink" title="服务分层(逻辑)"></a>服务分层(逻辑)</h2><ul>
-<li>外部设备</li>
-<li>微服务(SOA)<ul>
-<li>聚合服务(适配服务 边界服务): Web BF, Mobile BFF, Pubilc BFF</li>
-<li>基础服务(核心领域服务 公共服务 中间层服务)</li>
+<li>栈<ul>
+<li>实现 用法</li>
+<li>最小栈 留意栈的特性 LIFO </li>
+<li>单调栈 </li>
 </ul>
 </li>
-</ul>
-<h2 id="微服务技术架构体系"><a href="#微服务技术架构体系" class="headerlink" title="微服务技术架构体系"></a>微服务技术架构体系</h2><ul>
-<li>接入层<ul>
-<li>外部+内部 LB</li>
-</ul>
-</li>
-<li>网关层<ul>
-<li>作用：反向代理 限流熔断</li>
-<li>组成：内部GW H5GW 无线GW 第三方GW 开放平台GW</li>
-</ul>
-</li>
-<li>业务服务层<ul>
-<li>聚合服务 基础服务</li>
-</ul>
-</li>
-<li>支撑服务<ul>
-<li>组成：注册发现 集中配置 容错限流 认证授权 日志聚合 监控告警 后台服务</li>
-</ul>
-</li>
-<li>平台服务<ul>
-<li>组成：发布系统 集群资源调用 镜像治理 资源治理 IAM</li>
-</ul>
-</li>
-<li>基础设置<ul>
-<li>计算 网络 存储 NOC监控 安全 IDC</li>
-</ul>
-</li>
-<li>六层体系中的纵向能力<ul>
-<li>微服务开发框架</li>
-<li>持续交付流水线</li>
-<li>端到端工具链</li>
-<li>工程实践与规范</li>
-</ul>
-</li>
-</ul>
-<h2 id="服务发现机制"><a href="#服务发现机制" class="headerlink" title="服务发现机制"></a>服务发现机制</h2><h3 id="三种主流服务发现模式"><a href="#三种主流服务发现模式" class="headerlink" title="三种主流服务发现模式"></a>三种主流服务发现模式</h3><ul>
-<li>传统LB模式<ul>
-<li>DNS –Discover–&gt; Consumer –Invoke–&gt; Load Balancer –Load Balancing Invoke–&gt; Service Provider</li>
-</ul>
-</li>
-<li>进程内LB模式<ul>
-<li>Service Registry –Discover–&gt; Consumer(LB) –Load Balancing &amp; Invoke–&gt; ServiceProvider –Registry &amp; Keep Alive–&gt; Service Registry</li>
-</ul>
-</li>
-<li>主机独立LB模式<ul>
-<li>Service Registry –Discover–&gt; Host( Consumer -&gt; LB ) –Load Balancing &amp; Invoke–&gt; ServiceProvider –Registry &amp; Keep Alive–&gt; Service Registry</li>
-</ul>
-</li>
-</ul>
-<h2 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h2><ul>
-<li>四项基本功能<ul>
-<li>反向路由</li>
-<li>安全认证</li>
-<li>限流熔断</li>
-<li>日志监控</li>
-</ul>
-</li>
-</ul>
-<h2 id="网关架构"><a href="#网关架构" class="headerlink" title="网关架构"></a>网关架构</h2><blockquote><p>Http Request -&gt; pre filters -&gt; router filters -&gt; origin server -&gt; router filters -&gt; post filters -&gt; Http Response</p>
-</blockquote>
-<h2 id="路由发现体系"><a href="#路由发现体系" class="headerlink" title="路由发现体系"></a>路由发现体系</h2><ul>
-<li>服务注册中心 -&gt; 服务治理</li>
-</ul>
-<h2 id="配置中心"><a href="#配置中心" class="headerlink" title="配置中心"></a>配置中心</h2><ul>
-<li>统一配置</li>
-<li>动态配置</li>
-<li>Config Server -&gt; Service</li>
-</ul>
-<h2 id="微服务中两种典型通信方式"><a href="#微服务中两种典型通信方式" class="headerlink" title="微服务中两种典型通信方式"></a>微服务中两种典型通信方式</h2><table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:center">RPC</th>
-<th style="text-align:center">REST</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">耦合性</td>
-<td style="text-align:center">强耦合</td>
-<td style="text-align:center">松散耦合</td>
-</tr>
-<tr>
-<td style="text-align:center">消息协议</td>
-<td style="text-align:center">二进制 thrift,protobuf</td>
-<td style="text-align:center">文本 xml, json</td>
-</tr>
-<tr>
-<td style="text-align:center">通讯协议</td>
-<td style="text-align:center">TCP</td>
-<td style="text-align:center">HTTP/HTTP2</td>
-</tr>
-<tr>
-<td style="text-align:center">性能</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">一般低于RPC</td>
-</tr>
-<tr>
-<td style="text-align:center">接口契约IDL</td>
-<td style="text-align:center">thrift,protobuf IDL</td>
-<td style="text-align:center">swagger</td>
-</tr>
-<tr>
-<td style="text-align:center">客户端</td>
-<td style="text-align:center">强类型客户端，一般自动生成，多语言</td>
-<td style="text-align:center">一般HTTP客户端可访问，可自动生成强类型客户端，多语言</td>
-</tr>
-<tr>
-<td style="text-align:center">案例</td>
-<td style="text-align:center">Dubbo,motan,Tars,grpc,thrift</td>
-<td style="text-align:center">spring mvc/boot, Jax-rs，drop wizard</td>
-</tr>
-<tr>
-<td style="text-align:center">开发者友好</td>
-<td style="text-align:center">客户端比较方便，但二进制消息不可读</td>
-<td style="text-align:center">文本消息开发者可读</td>
-</tr>
-<tr>
-<td style="text-align:center">对外开放</td>
-<td style="text-align:center">对外一般需要转换成REST/文本协议</td>
-<td style="text-align:center">直接可以对外开放</td>
-</tr>
-</tbody>
-</table>
-<h2 id="微服务框架和治理"><a href="#微服务框架和治理" class="headerlink" title="微服务框架和治理"></a>微服务框架和治理</h2><ul>
-<li>服务注册发现</li>
-<li>负载均衡、软路由</li>
-<li>日志</li>
-<li>Metrics</li>
-<li>调用链埋点</li>
-<li>限流熔断</li>
-<li>安全&amp;访问控制</li>
-<li>REST/RPC</li>
-<li>序列化 xml/json/二进制</li>
-<li>代码生成</li>
-<li>统一异常处理</li>
-<li>文档</li>
-<li>配置集成</li>
-<li>后台服务集成 DB/MQ/Cache</li>
-</ul>
-<h2 id="微服务分层监控和架构"><a href="#微服务分层监控和架构" class="headerlink" title="微服务分层监控和架构"></a>微服务分层监控和架构</h2><ul>
-<li>监控分层<ul>
-<li>技术设施监控<ul>
-<li>网络 交换机</li>
-<li>网络流量 丢包 错包 连接数</li>
-</ul>
-</li>
-<li>系统层监控<ul>
-<li>物理机 虚拟机 os</li>
-<li>cpu memory network disk</li>
-</ul>
-</li>
-<li>应用层监控<ul>
-<li>url service sql cache可用率 响应时间 qps</li>
-</ul>
-</li>
-<li>业务监控<ul>
-<li>登录 注册 下单 支付</li>
-</ul>
-</li>
-<li>端用户体验监控<ul>
-<li>性能 返回码 城市 地区 运营商 版本 系统</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>监控点<ul>
-<li>日志监控</li>
-<li>Metrics监控</li>
-<li>健康检查</li>
-<li>调用链监控</li>
-<li>告警系统</li>
-</ul>
-</li>
-<li>监控架构<ul>
-<li>微服务 agent -&gt; kafka</li>
-<li>kafka –log–&gt; ELK</li>
-<li>kafka –metrics–&gt; Influx DB/Grafana</li>
-</ul>
-</li>
-</ul>
-<h2 id="微服务调用链监控"><a href="#微服务调用链监控" class="headerlink" title="微服务调用链监控"></a>微服务调用链监控</h2><ul>
-<li>调用链监控原理：span tree</li>
-<li>开源工具：CAT、Zipkin、Pinpoint</li>
-</ul>
-<h2 id="微服务限流熔断"><a href="#微服务限流熔断" class="headerlink" title="微服务限流熔断"></a>微服务限流熔断</h2><ul>
-<li>核心概念<ul>
-<li>熔断</li>
-<li>隔离</li>
-<li>限流</li>
-<li>降级</li>
-</ul>
-</li>
-<li>了解Hystrix如何实现限流熔断</li>
-</ul>
-<h2 id="容器部署-持续交付-发布模式"><a href="#容器部署-持续交付-发布模式" class="headerlink" title="容器部署 持续交付 发布模式"></a>容器部署 持续交付 发布模式</h2><ul>
-<li>容器的优势<ul>
-<li>解决环境一致性问题</li>
-<li>镜像部署</li>
-</ul>
-</li>
-<li>持续交付流水线<ul>
-<li>git –Jenkins 构建 单元测试 打镜像–&gt; 镜像治理中心(docker registry)</li>
-<li>测试环境 –&gt; UAT环境 –&gt; 生产环境(蓝绿/灰度部署)</li>
-</ul>
-</li>
-<li>蓝绿部署、灰度部署</li>
-</ul>
-<h2 id="容器调度以及基于容器的发布体系"><a href="#容器调度以及基于容器的发布体系" class="headerlink" title="容器调度以及基于容器的发布体系"></a>容器调度以及基于容器的发布体系</h2><ul>
-<li>mesos容器调度<ul>
-<li>ZooKeeper –&gt; Master Leader/Master Standby</li>
-<li>Master Leader –&gt; Slave</li>
-</ul>
-</li>
-<li>发布体系 </li>
 </ul>
 
       
@@ -754,14 +482,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/后端/" rel="tag"># 后端</a>
-          
-            <a href="/tags/架构/" rel="tag"># 架构</a>
-          
-        </div>
-      
 
       
       
@@ -771,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/06/js-design-pattern/" rel="next" title="js设计模式">
-                <i class="fa fa-chevron-left"></i> js设计模式
+              <a href="/2019/04/15/node-note/" rel="next" title="node笔记">
+                <i class="fa fa-chevron-left"></i> node笔记
               </a>
             
           </div>
@@ -780,10 +500,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/09/node-memory-leak/" rel="prev" title="node内存泄漏如何定位">
-                node内存泄漏如何定位 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
