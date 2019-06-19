@@ -97,13 +97,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://wangys219.github.io/about/index.html">
+<meta property="og:title" content="叶笋的博客">
+<meta property="og:url" content="http://wangys219.github.io/page/2/index.html">
 <meta property="og:site_name" content="叶笋的博客">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-31T12:56:04.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
+<meta name="twitter:title" content="叶笋的博客">
 
 
 
@@ -111,7 +110,7 @@
 
   
   
-  <link rel="canonical" href="http://wangys219.github.io/about/">
+  <link rel="canonical" href="http://wangys219.github.io/page/2/">
 
 
 
@@ -121,7 +120,7 @@
   };
 </script>
 
-  <title>关于 | 叶笋的博客</title>
+  <title>叶笋的博客</title>
   
 
 
@@ -169,7 +168,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,25 +280,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -329,57 +310,212 @@
           
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div id="posts" class="posts-expand">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wangys219.github.io/2017/02/15/mergetool/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wangys219">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶笋的博客">
+    </span>
+
     
-    
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/02/15/mergetool/" class="post-title-link" itemprop="url">使用PyCharm来做Git合并工具(Mac)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-02-15 23:28:46" itemprop="dateCreated datePublished" datetime="2017-02-15T23:28:46+08:00">2017-02-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-04 23:39:12" itemprop="dateModified" datetime="2019-04-04T23:39:12+08:00">2019-04-04</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         
           
+            <h3 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h3><p>昨天才第一次知道有mergetool这种东西，于是今天立马就上手试了试。对于Git的使用，个人偏爱敲命令行，但是命令行下遇到冲突就很尴尬。冲突少的话，直接vim很快，冲突一多就很郁闷了。所以，我觉得mergetool还是蛮有用的。本着不花钱的原则，今天尝试了几个免费的工具，如fileMerge，meld，diffMerge，怎么说呢，没有一款像当初第一次用SourceTree那样，一下就能抓住我的心(颜狗)。于是，我开始怀念之前WebStorm中的冲突解决，深得我心。再然后呢，我就想直接设置WebStorm来作为mergetool了。可是，我的教育版证书也就还有一个月就过期了(怀念大学)，再次本着不想花钱的原则，选择了JetBrains家的另一个IDE，PyCharm CE，毕竟社区版，真的不花钱。然后鼓捣鼓捣就用上了，废话不讲了，上配置。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<li>下载个PyCharm CE</li>
+<li>编辑Git的配置文件 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> vim $home/.gitconfig</span><br></pre></td></tr></table></figure></li>
+<li>把下面的配置粘进去 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[mergetool]</span><br><span class="line">    keepBackup = false</span><br><span class="line">    prompt = false</span><br><span class="line">[merge]</span><br><span class="line">    tool = charm</span><br><span class="line">[mergetool &quot;charm&quot;]</span><br><span class="line">    cmd = &quot;/Applications/PyCharm\\ CE.app/Contents/MacOS/pycharm&quot; merge $(cd $(dirname &quot;$LOCAL&quot;) &amp;&amp; pwd)/$(basename &quot;$LOCAL&quot;) $(cd $(dirname &quot;$REMOTE&quot;) &amp;&amp; pwd)/$(basename &quot;$REMOTE&quot;) $(cd $(dirname &quot;$BASE&quot;) &amp;&amp; pwd)/$(basename &quot;$BASE&quot;) $(cd $(dirname &quot;$MERGED&quot;) &amp;&amp; pwd)/$(basename &quot;$MERGED&quot;) </span><br><span class="line">    trustExitCode = true</span><br><span class="line">[diff]</span><br><span class="line">   tool = charm</span><br><span class="line">[difftool &quot;charm&quot;]</span><br><span class="line">   cmd = &quot;/Applications/PyCharm\\ CE.app/Contents/MacOS/pycharm&quot; diff $(cd $(dirname &quot;$LOCAL&quot;) &amp;&amp; pwd)/$(basename &quot;$LOCAL&quot;) $(cd $(dirname &quot;$REMOTE&quot;) &amp;&amp; pwd)/$(basename &quot;$REMOTE&quot;)</span><br></pre></td></tr></table></figure></li>
+<li>保存退出</li>
+<li>使用 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git mergetool</span><br><span class="line"><span class="meta">$</span> git difftool</span><br></pre></td></tr></table></figure> 
+</li>
+</ol>
+<h3 id="结"><a href="#结" class="headerlink" title="结"></a>结</h3><ol>
+<li>启动速度超慢有没有。。。果然颜值和效率不能兼得嘛？</li>
+<li>JetBrains官网给出的教程里说让我们<code>Create Launcher Script</code>，我没用这种方法，因为用这种方法要事先启动PyCharm，而且一执行<code>$ git mergetool</code>就会立即收到exitcode。那个启动脚本是python写的，不知道能不能通过修改那个启动脚本来让它正常。</li>
+<li><code>&quot;/Applications/PyCharm\\ CE.app/Contents/MacOS/pycharm&quot;</code>这里的空格一定要用双反来转义。</li>
+</ol>
+
+          
         
-      </div>
-      
-      
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
           
-
-  
-
-
 
         </div>
         
@@ -662,10 +798,6 @@
 
 
   
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
-
-
 
   
 
@@ -681,8 +813,6 @@
 
   
 
-
-  
 
 
   
