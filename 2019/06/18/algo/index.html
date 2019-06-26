@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="叶笋的博客">
 <meta property="og:description" content="栈和队列重点 了解 FIFO 和 LIFO 处理顺序的原理 实现这两个数据结构 熟悉内置的队列和栈结构 解决基本的队列相关问题，尤其是 BFS 解决基本的栈相关问题 理解当你使用 DFS 和其他递归算法来解决问题时，系统栈是如何帮助你的。   队列 定义 实现 循环队列 实现 BFS 实现 如何避免无限循环 作用：遍历，求最短路径 BFS 注意深度需要靠统计每一层的size来辅助计算   栈 实现">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-18T14:47:50.875Z">
+<meta property="og:updated_time" content="2019-06-26T10:27:10.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法笔记">
 <meta name="twitter:description" content="栈和队列重点 了解 FIFO 和 LIFO 处理顺序的原理 实现这两个数据结构 熟悉内置的队列和栈结构 解决基本的队列相关问题，尤其是 BFS 解决基本的栈相关问题 理解当你使用 DFS 和其他递归算法来解决问题时，系统栈是如何帮助你的。   队列 定义 实现 循环队列 实现 BFS 实现 如何避免无限循环 作用：遍历，求最短路径 BFS 注意深度需要靠统计每一层的size来辅助计算   栈 实现">
@@ -373,12 +373,24 @@
                 
               
 
-              <time title="Created: 2019-06-18 22:41:40 / Modified: 22:47:50" itemprop="dateCreated datePublished" datetime="2019-06-18T22:41:40+08:00">2019-06-18</time>
+              <time title="Created: 2019-06-18 22:41:40" itemprop="dateCreated datePublished" datetime="2019-06-18T22:41:40+08:00">2019-06-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-26 18:27:10" itemprop="dateModified" datetime="2019-06-26T18:27:10+08:00">2019-06-26</time>
               
             
           </span>
@@ -457,9 +469,40 @@
 <li>栈<ul>
 <li>实现 用法</li>
 <li>最小栈 留意栈的特性 LIFO </li>
-<li>单调栈 </li>
+<li>单调栈</li>
+<li>DFS 作用：查找从跟节点到目标节点的路径</li>
+<li>BFS和DFS的区别：遍历顺序不同</li>
+<li>计算DFS空间复杂度时，考虑系统栈</li>
+<li>使用递归实现DFS时，递归深度太高将导致栈溢出，优先使用显示栈实现DFS</li>
 </ul>
 </li>
+</ul>
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>哈希表分为：哈希集合(非重复值) 哈希映射(键值对)</p>
+<h4 id="重点-1"><a href="#重点-1" class="headerlink" title="重点"></a>重点</h4><ol>
+<li>哈希表的原理是什么？</li>
+<li>如何设计哈希表？</li>
+<li>如何使用哈希集合来解决与重复相关的问题？</li>
+<li>如何使用哈希映射按键聚合信息？</li>
+<li>如何在使用哈希表时设计正确的键？</li>
+</ol>
+<ul>
+<li>哈希表原理: 哈希函数将键映射到存储桶</li>
+<li>设计哈希表的关键<ul>
+<li>哈希函数(散列函数)<ul>
+<li>键值的范围</li>
+<li>桶的数量</li>
+</ul>
+</li>
+<li>冲突解决<ul>
+<li>冲突小 数组</li>
+<li>冲突大 高度平衡的二叉树    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="待总结"><a href="#待总结" class="headerlink" title="待总结"></a>待总结</h3><ul>
+<li>二叉树的前序中序后序遍历</li>
 </ul>
 
       
